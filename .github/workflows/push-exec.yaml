@@ -1,12 +1,35 @@
+# nome da pipeline
 name: 'Execução por Push'
 
+#gatilhos por push (atualização da branch main)
 on:
   push:
     branches:
       - main
-
+      
+#tarefas dentro da pipeline
 jobs:
+  lint:
+    name: Code inspection
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run linting
+        run: npm run lint --if-present
+
   test:
+    needs: lint
     name: Run tests
     runs-on: ubuntu-latest
 
