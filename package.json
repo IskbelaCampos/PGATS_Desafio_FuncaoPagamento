@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha test",
     "lint": "eslint src test",
-    "test-report": "mocha --reporter mochawesome --reporter-options reportDir=reports,reportFilename=mochawesome,quiet=true"
+    "test-report": "mocha --reporter mochawesome --reporter-options reportDir=reports,reportFilename=mochawesome,quiet=true",
+    "test-junit": "mocha --reporter mocha-junit-reporter --reporter-options mochaFile=reports/junit-results.xml"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,8 @@
   "type": "module",
   "devDependencies": {
     "eslint": "^8.57.0",
-    "mocha": "^11.7.6"
+    "mocha": "^11.7.6",
+    "mocha-junit-reporter": "^2.0.0"
   },
   "bugs": {
     "url": "https://github.com/IskbelaCampos/PGATS_Desafio_FuncaoPagamento/issues"

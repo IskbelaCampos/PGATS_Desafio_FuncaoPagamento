@@ -45,12 +45,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Generate test report
+      - name: Generate Mochawesome report
         run: npm run test-report
 
-      - name: Upload test report artifact
+      - name: Generate JUnit XML report
+        run: npm run test-junit
+
+      - name: Upload test report artifacts
         uses: actions/upload-artifact@v4
-        if: ${{ always()}}
+        if: ${{ always() }}
         with:
-          name: mocha-report
+          name: test-reports
           path: reports

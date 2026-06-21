@@ -20,7 +20,7 @@ npm test
 
 - `.github/workflows/manual-exec.yml` — workflow acionável manualmente (`workflow_dispatch`).
 - `.github/workflows/scheduled-exec.yml` — workflow agendado via `schedule` (cron). Atenção: GitHub Actions usa UTC.
-- `.github/workflows/push-exec.yaml` — workflow que dispara em `push` na branch `main`, gera relatório de testes e publica o artifact na execução.
+- `.github/workflows/push-exec.yaml` — workflow que dispara em `push` na branch `main`, gera dois relatórios de teste (HTML e JUnit XML) e publica os arquivos como artifact na execução.
 
 **O que os workflows fazem (resumo)**
 
