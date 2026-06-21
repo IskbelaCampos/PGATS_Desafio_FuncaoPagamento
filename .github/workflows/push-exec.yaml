@@ -45,5 +45,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run unit tests
-        run: npm test
+      - name: Generate test report
+        run: npm run test-report
+
+      - name: Upload test report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mocha-report
+          path: reports
