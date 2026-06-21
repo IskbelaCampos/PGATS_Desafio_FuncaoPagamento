@@ -1,0 +1,30 @@
+# nome da pipeline
+name: 'Execução Agendada'
+
+#gatilhos manual
+on:
+  schedule:
+    #cronograma de execução
+    # 1 - minuto, 2 - hora, 3 - dia do mês, 4 - mês, 5 - dia da semana (hora = colocar uma hs a menos para horario de Lisboa, domingo = 0)
+    - cron: '/10 * * * *'
+
+#tarefas dentro da pipeline
+jobs:
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run unit tests
+        run: npm test

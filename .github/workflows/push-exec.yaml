@@ -1,15 +1,10 @@
-# nome da pipeline
-name: 'Execução Agendada'
+name: 'Execução por Push'
 
-#gatilhos manual
 on:
-  workflow_dispatch:
-  schedule:
-    #cronograma de execução
-    # 1 - minuto, 2 - hora, 3 - dia do mês, 4 - mês, 5 - dia da semana (domingo = 0)
-    - cron: '45 12 * * 0'
+  push:
+    branches:
+      - main
 
-#tarefas dentro da pipeline
 jobs:
   test:
     name: Run tests
