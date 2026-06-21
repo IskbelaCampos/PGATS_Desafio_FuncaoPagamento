@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha test",
+    "lint": "eslint src test"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,8 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "mocha": "^11.7.6"
+    "mocha": "^11.7.6",
+    "eslint": "^8.57.0"
   },
   "bugs": {
     "url": "https://github.com/IskbelaCampos/PGATS_Desafio_FuncaoPagamento/issues"

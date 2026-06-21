@@ -1,7 +1,7 @@
 # nome da pipeline
 name: 'Execução Agendada'
 
-#gatilhos manual
+#gatilhos por agendamento
 on:
   schedule:
     #cronograma de execução
