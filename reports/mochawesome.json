@@ -1,0 +1,161 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-21T21:58:37.888Z",
+    "end": "2026-06-21T21:58:37.893Z",
+    "duration": 5,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d2eeb5ae-5c6c-481a-8728-b3f20fb65e5e",
+      "title": "",
+      "fullFile": "C:\\Projetos\\PGATS\\Projects\\disciplina Programação para automação\\PGATS_Desafio_FuncaoPagamento\\test\\servicoDePagamentos.test.js",
+      "file": "\\test\\servicoDePagamentos.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1ca27610-333c-43f9-881e-b10fb148da00",
+          "title": "Validar serviço de Pagamento",
+          "fullFile": "C:\\Projetos\\PGATS\\Projects\\disciplina Programação para automação\\PGATS_Desafio_FuncaoPagamento\\test\\servicoDePagamentos.test.js",
+          "file": "\\test\\servicoDePagamentos.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validar que a propriedade categoria é identificada como cara quando o valor de pagamento é maior que 100.00",
+              "fullTitle": "Validar serviço de Pagamento Validar que a propriedade categoria é identificada como cara quando o valor de pagamento é maior que 100.00",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// arrage\nconst servicoDePagamento = new ServicoDePagamentos();\n// act\nservicoDePagamento.realizarPagamento('0079-8280-KO45', 'GoldEnergy', 150.00);\nconst pagamentos = servicoDePagamento.consultarUltimoPagamento();\nconst meuPagamento = pagamentos;\n// assert\nassert.equal(meuPagamento.CodigoDeBarra,'0079-8280-KO45');\nassert.equal(meuPagamento.Empresa,'GoldEnergy');\nassert.equal(meuPagamento.Valor, 150.00);\nassert.equal(meuPagamento.Categoria,'cara');",
+              "err": {},
+              "uuid": "81dd31cd-0039-44ee-904f-f34c87ed7890",
+              "parentUUID": "1ca27610-333c-43f9-881e-b10fb148da00",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar que a propriedade categoria é identificada como padrão quando o valor de pagamento é menor que 100.00",
+              "fullTitle": "Validar serviço de Pagamento Validar que a propriedade categoria é identificada como padrão quando o valor de pagamento é menor que 100.00",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// arrage\nconst servicoDePagamento = new ServicoDePagamentos();\n// act\nservicoDePagamento.realizarPagamento('0079-8280-KO45', 'GoldEnergy', 99.00);\nconst pagamentos = servicoDePagamento.consultarUltimoPagamento();\nconst meuPagamento = pagamentos;\n// assert\nassert.equal(meuPagamento.CodigoDeBarra,'0079-8280-KO45');\nassert.equal(meuPagamento.Empresa,'GoldEnergy');\nassert.equal(meuPagamento.Valor, 99.00);\nassert.equal(meuPagamento.Categoria,'padrão');",
+              "err": {},
+              "uuid": "bc483026-2e58-4b7a-b2c3-adfb8538526f",
+              "parentUUID": "1ca27610-333c-43f9-881e-b10fb148da00",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar que a propriedade categoria é identificada como padrão quando o valor de pagamento é igual a 100.00",
+              "fullTitle": "Validar serviço de Pagamento Validar que a propriedade categoria é identificada como padrão quando o valor de pagamento é igual a 100.00",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// arrage\nconst servicoDePagamento = new ServicoDePagamentos();\n// act\nservicoDePagamento.realizarPagamento('0079-8280-KO45', 'GoldEnergy', 100.00);\nconst pagamentos = servicoDePagamento.consultarUltimoPagamento();\nconst meuPagamento = pagamentos;\n// assert\nassert.equal(meuPagamento.CodigoDeBarra,'0079-8280-KO45');\nassert.equal(meuPagamento.Empresa,'GoldEnergy');\nassert.equal(meuPagamento.Valor, 100.00);\nassert.equal(meuPagamento.Categoria,'padrão');",
+              "err": {},
+              "uuid": "3ead2e8e-dca7-4ff7-b247-17235351897a",
+              "parentUUID": "1ca27610-333c-43f9-881e-b10fb148da00",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar que ultimo pagamento é retornado",
+              "fullTitle": "Validar serviço de Pagamento Validar que ultimo pagamento é retornado",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// arrage\nconst servicoDePagamento = new ServicoDePagamentos();\n// act\nservicoDePagamento.realizarPagamento('0079-8280-KO45', 'GoldEnergy', 99.00);\nservicoDePagamento.realizarPagamento('8280-8HG0-KOPI', 'Americanas', 100.00);\nservicoDePagamento.realizarPagamento('1548-HYGF-58YT', 'Malu', 89.00);\nconst pagamentos = servicoDePagamento.consultarUltimoPagamento();\nconst meuPagamento = pagamentos;\n// assert\nassert.equal(meuPagamento.CodigoDeBarra,'1548-HYGF-58YT');\nassert.equal(meuPagamento.Empresa,'Malu');\nassert.equal(meuPagamento.Valor, 89.00);\nassert.equal(meuPagamento.Categoria,'padrão');",
+              "err": {},
+              "uuid": "b502db31-166a-4d38-9267-3debd0d18596",
+              "parentUUID": "1ca27610-333c-43f9-881e-b10fb148da00",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "81dd31cd-0039-44ee-904f-f34c87ed7890",
+            "bc483026-2e58-4b7a-b2c3-adfb8538526f",
+            "3ead2e8e-dca7-4ff7-b247-17235351897a",
+            "b502db31-166a-4d38-9267-3debd0d18596"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.6"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports",
+        "reportFilename": "mochawesome",
+        "quiet": "true"
+      },
+      "version": "6.3.2"
+    }
+  }
+}
