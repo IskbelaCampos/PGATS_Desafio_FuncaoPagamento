@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test"
   },
   "repository": {
     "type": "git",
@@ -14,6 +14,9 @@
   "author": "",
   "license": "ISC",
   "type": "module",
+  "devDependencies": {
+    "mocha": "^11.7.6"
+  },
   "bugs": {
     "url": "https://github.com/IskbelaCampos/PGATS_Desafio_FuncaoPagamento/issues"
   },
