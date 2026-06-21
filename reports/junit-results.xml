@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.003" tests="4" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-06-21T22:19:26" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Validar serviço de Pagamento" timestamp="2026-06-21T22:19:26" tests="4" file="C:\Projetos\PGATS\Projects\disciplina Programação para automação\PGATS_Desafio_FuncaoPagamento\test\servicoDePagamentos.test.js" time="0.002" failures="0">
+    <testcase name="Validar serviço de Pagamento Validar que a propriedade categoria é identificada como cara quando o valor de pagamento é maior que 100.00" time="0.000" classname="Validar que a propriedade categoria é identificada como cara quando o valor de pagamento é maior que 100.00">
+    </testcase>
+    <testcase name="Validar serviço de Pagamento Validar que a propriedade categoria é identificada como padrão quando o valor de pagamento é menor que 100.00" time="0.000" classname="Validar que a propriedade categoria é identificada como padrão quando o valor de pagamento é menor que 100.00">
+    </testcase>
+    <testcase name="Validar serviço de Pagamento Validar que a propriedade categoria é identificada como padrão quando o valor de pagamento é igual a 100.00" time="0.000" classname="Validar que a propriedade categoria é identificada como padrão quando o valor de pagamento é igual a 100.00">
+    </testcase>
+    <testcase name="Validar serviço de Pagamento Validar que ultimo pagamento é retornado" time="0.000" classname="Validar que ultimo pagamento é retornado">
+    </testcase>
+  </testsuite>
+</testsuites>
